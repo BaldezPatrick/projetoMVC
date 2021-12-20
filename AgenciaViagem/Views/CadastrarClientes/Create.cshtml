@@ -1,0 +1,65 @@
+﻿@model AgenciaViagem.Models.CadastrarCliente
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/compra.css">
+</head>
+
+<main id="container-compra">
+    <h1>Cadastro do cliente</h1>
+    <div id="container-cadastro">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly"></div>
+            <fieldset>
+                <div class="campo-field">
+                    <label asp-for="nome_cliente">Nome</label>
+                    <input asp-for="nome_cliente" />
+                    <span asp-validation-for="nome_cliente"></span>
+                </div>
+                <div class="campo-field">
+                    <label asp-for="sobrenome_cliente">Sobrenome</label>
+                    <input asp-for="sobrenome_cliente" />
+                    <span asp-validation-for="sobrenome_cliente"></span>
+                </div>
+            </fieldset>
+            <div class="campo-field">
+                <label asp-for="data_nasc_cliente">Data de Nascimento</label>
+                <input asp-for="data_nasc_cliente" />
+                <span asp-validation-for="data_nasc_cliente"></span>
+            </div>
+            <div class="campo-field">
+                <label asp-for="endereco_cliente">Endereço</label>
+                <input asp-for="endereco_cliente" />
+                <span asp-validation-for="endereco_cliente"></span>
+            </div>
+            <div class="campo-field">
+                <label asp-for="telefone_cliente">Telefone</label>
+                <input asp-for="telefone_cliente" />
+                <span asp-validation-for="telefone_cliente"></span>
+            </div>
+            <div class="campo-field">
+                <label asp-for="cidade_cliente">Cidade</label>
+                <input asp-for="cidade_cliente" />
+                <span asp-validation-for="cidade_cliente"></span>
+            </div>
+            <div class="campo-field">
+                <label asp-for="email_cliente">E-mail</label>
+                <input asp-for="email_cliente" />
+                <span asp-validation-for="email_cliente"></span>
+            </div>
+            <div class="campo-field">
+                <input type="submit" value="Cadastro" id="btn" onclick="alert('Cadastro feito com sucesso!')" />
+            </div>
+        </form>
+        <div>
+            <a asp-action="Index">Lista de cadastros</a>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

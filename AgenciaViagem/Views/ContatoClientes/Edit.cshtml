@@ -1,0 +1,66 @@
+﻿@model AgenciaViagem.Models.ContatoCliente
+
+@{
+    ViewData["Title"] = "Contato";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/compra.css" />
+</head>
+
+<div id="container-compra">
+    <h1>Atualizar dados do contato</h1>
+    <div id="container-cadastro">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly"></div>
+            <input type="hidden" asp-for="Id_contato" />
+            <fieldset>
+                <div class="campo-field">
+                    <label asp-for="nome_contato">Nome</label>
+                    <input asp-for="nome_contato" />
+                    <span asp-validation-for="nome_contato"></span>
+                </div>
+                <div class="campo-field">
+                    <label asp-for="sobrenome_contato">Sobrenome</label>
+                    <input asp-for="sobrenome_contato" />
+                    <span asp-validation-for="sobrenome_contato"></span>
+                </div>
+            </fieldset>
+            <div class="campo-field">
+                <label asp-for="telefone_contato">Telefone</label>
+                <input asp-for="telefone_contato" />
+                <span asp-validation-for="telefone_contato"></span>
+            </div>
+            <div class="campo-field">
+                <label asp-for="cidade_contato">Cidade</label>
+                <input asp-for="cidade_contato" />
+                <span asp-validation-for="cidade_contato"></span>
+            </div>
+            <div class="campo-field">
+                <label asp-for="regiao_contato">Região</label>
+                <input asp-for="regiao_contato" />
+                <span asp-validation-for="regiao_contato"></span>
+            </div>
+            <div class="campo-field">
+                <label asp-for="email_contato">E-mail</label>
+                <input asp-for="email_contato">
+                <span asp-validation-for="email_contato"></span>
+            </div>
+            <div class="campo-field">
+                <label asp-for="motivo_contato">Motivo do contato</label>
+                <input asp-for="motivo_contato" />
+                <span asp-validation-for="motivo_contato"></span>
+            </div>
+            <div class="campo-field">
+                <input type="submit" value="Atualizar" id="btn" onclick="alert('Atualização realizada com sucesso!')" />
+            </div>
+        </form>
+        <div>
+            <a asp-action="Index">Lista de contatos</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

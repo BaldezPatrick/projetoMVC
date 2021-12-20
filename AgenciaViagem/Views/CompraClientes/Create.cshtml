@@ -1,0 +1,77 @@
+﻿@model AgenciaViagem.Models.CompraCliente
+
+@{
+    ViewData["Title"] = "Compra";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/compra.css">
+</head>
+
+<main id="container-compra">
+    <section id="chamada-compra">
+        <h1>Efetuando compra...</h1>
+        <h2>Você está a um passo de sua viagem</h2>
+        <p>Preencha os dados para realizar sua compra</p>
+    </section>
+    <div class="container-cadastro">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly"></div>
+            <fieldset>
+                <div class="campo-field">
+                    <label asp-for="nome_cliente">Nome</label>
+                    <input asp-for="nome_cliente" />
+                    <span asp-validation-for="nome_cliente"></span>
+                </div>
+                <div class="campo-field">
+                    <label asp-for="sobrenome_cliente">Sobrenome</label>
+                    <input asp-for="sobrenome_cliente" />
+                    <span asp-validation-for="sobrenome_cliente"></span>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="campo-field">
+                    <label asp-for="local_partida">De: </label>
+                    <input asp-for="local_partida" />
+                    <span asp-validation-for="local_partida"></span>
+                </div>
+                <div class="campo-field">
+                    <label asp-for="local_chegada">Para: </label>
+                    <input asp-for="local_chegada" />
+                    <span asp-validation-for="local_chegada"></span>
+                </div>
+            </fieldset>
+            <div class="campo-field">
+                <label asp-for="dia_ida">Dia de partida</label>
+                <input asp-for="dia_ida" />
+                <span asp-validation-for="dia_ida"></span>
+            </div>
+            <div class="campo-field">
+                <label asp-for="dia_chegada">Dia da volta</label>
+                <input asp-for="dia_chegada" />
+                <span asp-validation-for="dia_chegada"></span>
+            </div>
+            <div class="campo-field">
+                <label asp-for="qtd_passagem">Pessoas</label>
+                <input asp-for="qtd_passagem" min="1"/>
+                <span asp-validation-for="qtd_passagem"></span>
+            </div>
+            <div class="campo-field">
+                <label asp-for="num_assento">Nº Assento</label>
+                <input asp-for="num_assento" min="1"/>
+                <span asp-validation-for="num_assento"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Concluído" id="btn" onclick="alert('Compra realizada com sucesso!')" />
+            </div>
+        </form>
+        <div>
+            <a asp-action="Index">Tabela de compras</a>
+        </div>
+    </div>
+</main>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

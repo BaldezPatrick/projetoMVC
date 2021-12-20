@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Compra";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/compra.css">
+</head>
+
+<main id="container-compra">
+    <section id="chamada-compra">
+        <h2>Você está a um passo de sua viagem</h2>
+        <p>Preencha os dados para realizar sua compra</p>
+    </section>
+    <form method="post">
+        <fieldset>
+            <div class="campo-field">
+                <label for="nome">Nome</label><input type="text" name="nome" id="nome" required>
+            </div>
+            <div class="campo-field">
+                <label for="sobrenome">Sobrenome</label><input type="text" name="sobrenome" id="sobrenome">
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="campo-field">
+                <label for="local-partida">Local de partida</label><input type="text" name="local-partida" id="local-partida" required>
+            </div>
+            <div class="campo-field">
+                <label for="local-chegada">Destino</label><input type="text" name="local-chegada" id="local-chegada" required>
+            </div>
+        </fieldset>
+        <div class="campo-field">
+            <label for="dia-ida">Escolha o período</label>
+            <div>
+                <input type="date" name="dia-ida" id="dia-ida" required>
+            </div>
+            <div>
+                <input type="date" name="dia-volta" id="dia-volta">
+            </div>
+        </div>
+        <div class="campo-field">
+            <label for="qtd-passagem">Quantidade de passagens</label><input type="number" name="qtd-passagem" id="qtd-passagem" min="1" required>
+        </div>
+        <div class="campo-field">
+            <label for="assento">Número do assento</label><input type="number" name="assento" id="assento" required>
+        </div>
+        <button type="submit" onclick="alert('Compra realizada com sucesso!')">Concluído</button>
+    </form>
+</main>

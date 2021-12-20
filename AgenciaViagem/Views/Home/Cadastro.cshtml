@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/cadastro.css">
+</head>
+
+<main id="container-cadastro">
+    <form method="post">
+        <fieldset>
+            <div class="campo-field">
+                <label for="nome">Nome</label><input type="text" name="nome" id="nome" required>
+            </div>
+            <div class="campo-field">
+                <label for="sobrenome">Sobrenome</label><input type="text" name="sobrenome" id="sobrenome">
+            </div>
+        </fieldset>
+        <div class="campo-field">
+            <label for="nascimento">Data de nascimento</label><input type="date" name="nascimento" id="nascimento" style="width: 170px" required>
+        </div>
+        <div class="campo-field">
+            <label for="endereco">Endereço</label><input type="text" name="endereco" id="endereco" required>
+        </div>
+        <div class="campo-field">
+            <label for="telefone">Telefone</label><input type="tel" name="telefone" id="telefone">
+        </div>
+        <div class="campo-field">
+            <label for="cidade">Cidade</label><input type="text" name="cidade" id="cidade">
+        </div>
+        <div class="campo-field">
+            <label for="email">E-mail</label><input type="email" name="email" id="email" required>
+        </div>
+        <button type="submit" onclick="alert('Cadastro realizado com sucesso!')">Concluído</button>
+    </form>
+</main>

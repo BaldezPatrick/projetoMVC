@@ -1,0 +1,68 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+
+/*CADASTRO*/
+#container-cadastro {
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 10px;
+}
+
+
+form {
+    font-family: 'Rufina', serif;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+    form div {
+        margin-bottom: 6px;
+    }
+
+input {
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    height: 25px;
+}
+
+    input:focus {
+        border: 2px solid rgba(112, 112, 218, 0.747);
+    }
+
+fieldset {
+    border: 0;
+    margin-bottom: 10px;
+}
+
+    fieldset div {
+        display: inline-block;
+        margin: 10px;
+    }
+
+.campo-field label {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.campo-field div {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+button, #btn {
+    margin-top: 10px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.363);
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
+}

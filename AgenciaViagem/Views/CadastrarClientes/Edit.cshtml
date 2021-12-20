@@ -1,0 +1,66 @@
+﻿@model AgenciaViagem.Models.CadastrarCliente
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/compra.css">
+</head>
+
+
+
+<main id="container-compra">
+    <h1>Atualização de cadastro</h1>
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly"></div>
+        <input type="hidden" asp-for="Id_cliente" />
+        <fieldset>
+            <div class="campo-field">
+                <label asp-for="nome_cliente">Nome</label>
+                <input asp-for="nome_cliente" />
+                <span asp-validation-for="nome_cliente"></span>
+            </div>
+            <div class="campo-field">
+                <label asp-for="sobrenome_cliente">Sobrenome</label>
+                <input asp-for="sobrenome_cliente" />
+                <span asp-validation-for="sobrenome_cliente"></span>
+            </div>
+        </fieldset>
+        <div class="campo-field">
+            <label asp-for="data_nasc_cliente">Data de Nascimento</label>
+            <input asp-for="data_nasc_cliente" />
+            <span asp-validation-for="data_nasc_cliente"></span>
+        </div>
+        <div class="campo-field">
+            <label asp-for="endereco_cliente">Endereço</label>
+            <input asp-for="endereco_cliente" />
+            <span asp-validation-for="endereco_cliente"></span>
+        </div>
+        <div class="campo-field">
+            <label asp-for="telefone_cliente">Telefone</label>
+            <input asp-for="telefone_cliente" />
+            <span asp-validation-for="telefone_cliente"></span>
+        </div>
+        <div class="campo-field">
+            <label asp-for="cidade_cliente">Cidade</label>
+            <input asp-for="cidade_cliente" />
+            <span asp-validation-for="cidade_cliente"></span>
+        </div>
+        <div class="campo-field">
+            <label asp-for="email_cliente">E-mail</label>
+            <input asp-for="email_cliente" />
+            <span asp-validation-for="email_cliente"></span>
+        </div>
+        <div class="campo-field">
+            <input type="submit" value="Atualizar" id="btn" onclick="alert('Atualização de cadastro feita com sucesso!')" />
+        </div>
+        <div>
+            <a asp-action="Index"> Voltar</a>
+        </div>
+    </form>
+</main>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

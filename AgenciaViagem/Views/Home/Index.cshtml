@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Home";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/index.css"/>
+</head>
+
+<div id="conteudo-principal">
+    <section id="sec-principal">
+        <h1>Conecte-se aos melhores lugares do mundo com a gente.</h1>
+        <p>As maiores viagens pelo <strong>menor</strong> preço.</p>
+        <div id="saibaMais-main">
+            <p><a asp-action="Destinos">Saiba mais</a></p>
+        </div>
+    </section>
+    <div id="imagem-cidade">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/Imagens/cuba.jpg" class="d-block w-100" alt="Cidade de Cuba">
+                </div>
+                <div class="carousel-item">
+                    <img src="/Imagens/casas-coloridas-rio.jpg" class="d-block w-100" alt="Casas coloridas em frente a um rio">
+                </div>
+                <div class="carousel-item">
+                    <img src="/Imagens/cidade-veneza.jpg" class="d-block w-100" alt="Cidade de Veneza">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="cadastro">
+    <h3>Comprar passagens para uma viagem é um processo que não pode ser demorado, por isso, facilitamos todo esse processo para você. Compre passagens barata no conforto de casa.</h3>
+    <p>Ao se <strong><a asp-action="Create" asp-controller="CadastrarClientes">cadastrar</a></strong> você tem mais benefícios.</p>
+    <p id="btn-cadastro"><a asp-action="Create" asp-controller="CadastrarClientes">CADASTRE-SE JÁ</a></p>
+</div>

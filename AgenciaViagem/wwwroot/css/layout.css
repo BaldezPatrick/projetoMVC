@@ -1,0 +1,32 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pavanam&display=swap');
+
+/*Zerando os espaçamentos da página*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    font-size: 15pt;
+}
+
+body {
+    background-color: rgb(238, 186, 42);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.rodape {
+    text-align: center;
+}
+
+.rodape div {
+    margin: 10px;
+}
